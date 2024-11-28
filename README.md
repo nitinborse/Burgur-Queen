@@ -1,27 +1,70 @@
-# TaskManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+# Burger Queen Angular Project
 
-## Development server
+## Project Overview
+Burger Queen is a simple Angular project built using HTML, CSS, and Bootstrap. The application features three screens: **Login**, **Dashboard**, and **Add to Cart**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1. Login Screen
+- **Credentials**: 
+  - Username: `admin`
+  - Password: `1234`
+- Provides access to the dashboard upon successful login.
 
-## Build
+### 2. Dashboard
+- **Header**:
+  - Displays the logged-in username and profile image.
+  - Shows the cart item count dynamically.
+  - Includes a logout button.
+- **Burger List**:
+  - Displays burger images with their price and description.
+  - Users can add items to the cart.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 3. Add to Cart
+- Displays selected items in the cart.
+- Allows removing items from the cart.
+- Provides a "Place Order" button:
+  - On confirmation, logs the selected items in the console.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+- **Angular**
+- **HTML**
+- **CSS**
+- **Bootstrap**
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## How to Run
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the development server:
+   ```bash
+   ng serve
+   ```
+5. Open the application in your browser at `http://localhost:4200`.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Screenshots
+Include relevant screenshots of the Login, Dashboard, and Add to Cart screens (optional).
+
+---
+
+## Future Enhancements
+- Add user authentication via API.
+- Implement backend for order processing and data persistence.
+- Enhance UI/UX with advanced styling and animations.
+
+---
+
+## License
+This project is licensed under the MIT License.

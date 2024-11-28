@@ -1,0 +1,81 @@
+<div class="container mt-4">
+    <!-- Search Bar -->
+    <div class="mb-4">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search for a burger..."
+        [(ngModel)]="searchQuery"
+        (input)="filterItems()"
+      />
+    </div>
+  
+    <!-- Popular Items Section -->
+    <h3>Popular Items</h3>
+    <div class="row mb-4">
+      <div
+        class="col-sm-6 col-md-4 mb-3"
+        *ngFor="let item of filteredPopularItems"
+      >
+        <div class="card">
+          <img
+            [src]="item.image"
+            class="card-img-top"
+            alt="{{ item.name }}"
+            style="height: 200px; object-fit: cover;"
+            (click)="showBurgerDetails(item)"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">₹{{ item.price }}</p>
+            <button class="btn btn-warning" (click)="addToCart(item)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- New Arrival Items Section -->
+    <h3>New Arrivals</h3>
+    <div class="row">
+      <div
+        class="col-sm-6 col-md-4 mb-3"
+        *ngFor="let item of filteredNewArrivalItems"
+      >
+        <div class="card">
+          <img
+            [src]="item.image"
+            class="card-img-top"
+            alt="{{ item.name }}"
+            style="height: 200px; object-fit: cover;"
+            (click)="showBurgerDetails(item)"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">₹{{ item.price }}</p>
+            <button class="btn btn-warning" (click)="addToCart(item)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal for Burger Details -->
+    <div *ngIf="selectedBurger" class="modal" tabindex="-1" style="display:block;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{ selectedBurger.name }}</h5>
+            <button type="button" class="btn-close" (click)="selectedBurger = null"></button>
+          </div>
+          <div class="modal-body">
+            <img [src]="selectedBurger.image" alt="{{ selectedBurger.name }}" style="width: 100%; height: 250px; object-fit: cover;">
+            <p>{{ selectedBurger.description }}</p>
+            <p><strong>Price: ₹{{ selectedBurger.price }}</strong></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="selectedBurger = null">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

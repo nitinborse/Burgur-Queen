@@ -1,0 +1,41 @@
+/* Yellow background for the header */
+.bg-yellow {
+  background-color: #ffc107;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* User image styling */
+img.rounded-circle {
+  object-fit: cover;
+}
+
+/* Adjust dropdown to open on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  min-width: auto;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  img.rounded-circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown-toggle {
+    font-size: 0.9rem;
+  }
+}

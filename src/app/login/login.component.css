@@ -1,0 +1,48 @@
+/* Full-page background styling */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 20px;
+  }
+  
+  /* Styling for the login card */
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title styling */
+  h3 {
+    color: #343a40;
+    font-weight: bold;
+  }
+  
+  /* Input fields styling */
+  .form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    transition: all 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+  }
+  
+  /* Button styling */
+  .btn {
+    border-radius: 8px;
+    font-weight: bold;
+    background: #2575fc;
+    border: none;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #6a11cb;
+  }
+  

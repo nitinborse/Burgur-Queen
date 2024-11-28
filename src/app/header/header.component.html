@@ -1,0 +1,44 @@
+<header class="d-flex justify-content-between align-items-center p-3 bg-yellow">
+  <!-- Left Section: Logo and Component Name -->
+  <div class="d-flex align-items-center">
+    <img src="./assets/icons/burger.png" alt="Logo" class="me-2" width="50" height="50" (Click)="dashboard" />
+    <h1 class="m-0">Burger Queen</h1>
+  </div>
+
+  <!-- Right Section: Cart, User Info, and Logout -->
+  <div class="d-flex align-items-center">
+    <!-- Cart Icon -->
+    <div class="position-relative me-4">
+      <i class="bi bi-cart-fill fs-4" (click)="goToCart()" style="cursor: pointer;">
+        <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill">
+          {{ cartItemCount }}
+        </span>
+      </i>
+    </div>
+    <!-- User Dropdown -->
+    <div class="dropdown">
+      <button
+        class="btn d-flex align-items-center p-0 border-0 bg-transparent"
+        type="button"
+        id="userDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          [src]="userImage"
+          alt="User Image"
+          class="rounded-circle me-2"
+          width="40"
+          height="40"
+        />
+        <span class="me-1">{{ userName }}</span>
+        <i class="bi bi-chevron-down"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+        <li><a class="dropdown-item" (click)="dashboard()" >Dashboard</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
